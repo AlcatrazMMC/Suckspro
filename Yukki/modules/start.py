@@ -117,39 +117,3 @@ async def on_cleanmode_change(client, CallbackQuery):
         return
 
 
-@app.on_message(filters.command(["repo"])& filters.private)
-async def run(client, message):
-    await message.reply_text(f"Look at sky \n Sky is Blue 💙")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0AFiqLFq96XquupWkC3Wjww8cIo8HwACRAIAAtSXSEXU4M20BCBnFCQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"Now look at you \n There's No One Ugly as You 😝")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0FZiqLivDE15hr0iUXXB3uLKkm4iGQACvQIAAm9fSEXTjPhY1VGe5SQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"I Really Think You should be in the Zoo 😂")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0FliqLkzC0-vr0HKeCxg-QfbH8IW0gACbgIAAgnDSEVqYh91csOLqyQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"Don't worry I'll be there too 🥺")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0F9iqLoP10v9cGFlNDYlvMkf5EJcHgACDgIAApwgSUXoPrEi4_q4tyQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"But Laughing at you!!! ")
-    await app.send_sticker(message.chat.id,"CAACAgUAAxkBAAFC0GJiqLqM2c0OK0MM45QaNtMwYlpU9AACuwUAAg2iqVdfW2GdjZSKYSQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"Ask for repo again And \n I will hit you with a shoe 🌝")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0GZiqLubtDfUiSZOCibf8BS7LzsnuwACSgMAAlopSEUBme_jF0ul2yQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"If i do... \n Please You don't Cry ")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0GxiqLzmpch1zZbA87pClhIrqg1jGgACxwMAAs72QEUySsl-a4Af0CQE")
-    await asyncio.sleep(3)
-    await message.reply_text(f"And GOOD BYE !🎋💕")
-    await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0G9iqL0J8n28bWQS4_U3ziLujmHOoAACXgIAAm53SEW3PHkJlNtQ9iQE")
-    await message.reply_text(f"THE \n       END")
-
-
-@app.on_message(filters.command(["ping"]))
-async def on_start(_, message: Message):
-    bot_uptime = int(time.time() - boot)
-    Uptime = get_readable_time(bot_uptime)
-    image = random.choice(RANDOM)
-    await message.reply_photo(image, caption=
-        f"{botname} is alive and working good.\nPing : 89.345ms\nUptime : {Uptime}"
-    )
