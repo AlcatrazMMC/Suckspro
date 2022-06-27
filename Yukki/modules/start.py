@@ -116,4 +116,7 @@ async def on_cleanmode_change(client, CallbackQuery):
     except MessageNotModified:
         return
 
-
+@app.on_message(filters.command(["ping"]))
+async def on_start(_, message: Message):
+    await asyncio.sleep(5)
+    await message.delete()
