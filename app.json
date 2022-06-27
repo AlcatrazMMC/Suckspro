@@ -22,12 +22,12 @@
     "API_ID": {
       "description": "Get this value from my.telegram.org/apps.",
       "required": true,
-      "value": "9850297"
+      "value": "13376295"
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org/apps.",
       "required": true,
-      "value": "4e431723b5a68372db0e35a5486bd2fc"
+      "value": "538cfbef5d81322be66bf1d9f16fcfa4"
     },
     "BOT_TOKEN": {
       "description": "A Bot token from @BotFather",
