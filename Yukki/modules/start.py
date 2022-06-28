@@ -133,7 +133,6 @@ async def sex(_, message: Message):
     & ~filters.via_bot
     & ~filters.bot
     & ~filters.edited,
-    group=senko_group,
 )
 async def senko(_, message):
     getme = await bot.get_me()
