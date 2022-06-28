@@ -1,6 +1,10 @@
 import time
-import random
 import asyncio
+
+import Client
+import os
+import random
+from random import choice
 
 from pyrogram import filters
 from pyrogram.types import Message
@@ -116,7 +120,33 @@ async def on_cleanmode_change(client, CallbackQuery):
     except MessageNotModified:
         return
 
-@app.on_message(filters.command(["ping"]))
-async def on_start(_, message: Message):
+@app.on_message(filters.command(["sex"]))
+async def sex(_, message: Message):
     await asyncio.sleep(5)
     await message.delete()
+
+
+@app.on_message(
+    filters.group
+    & filters.incoming
+    & filters.reply
+    & ~filters.via_bot
+    & ~filters.bot
+    & ~filters.edited,
+    group=senko_group,
+)
+async def senko(_, message):
+    getme = await bot.get_me()
+    id = getme.id
+    if not message.reply_to_message.from_user.id == id:
+        return
+    RANDOM = (
+        "yes {message.from_user.mention}",
+        "uwu understand! u~u *does not really understand*",
+        "Hmm... :c",
+        "you are funny",
+        "hahhahaha ;",
+        "k",
+        "who",
+    )
+    await message.reply_text(choice(RANDOM))
