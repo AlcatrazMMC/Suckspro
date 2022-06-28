@@ -140,7 +140,7 @@ async def senko(_, message):
     id = getme.id
     if not message.reply_to_message.from_user.id == id:
         return
-    RANDOM = (
+    WELC = (
         "yes {message.from_user.mention}",
         "uwu understand! u~u *does not really understand*",
         "Hmm... :c",
@@ -149,4 +149,4 @@ async def senko(_, message):
         "k",
         "who",
     )
-    await message.reply_text(choice(RANDOM))
+    await message.reply_text(choice(WELC))
