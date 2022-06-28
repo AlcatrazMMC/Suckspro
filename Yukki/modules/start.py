@@ -1,7 +1,7 @@
 import time
 import asyncio
 
-import Client
+from pyrogram import Client
 import os
 import random
 from random import choice
