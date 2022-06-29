@@ -8,21 +8,6 @@ from Yukki import SUDOERS, app
 from Yukki.database import get_afk_users, get_served_chats
 
 
-@app.on_message(filters.command("afkusers") & filters.user(SUDOERS))
-async def total_users(_, message: Message):
-    afk_users = []
-    try:
-        chats = await get_afk_users()
-        for chat in chats:
-            afk_users.append(int(chat["user_id"]))
-    except Exception as e:
-        return await message.reply_text(f"**Error:-** {e}")
-    users = len(afk_users)
-    return await message.reply_text(
-        f"Total AFK Users on Bot:- **{users}**"
-    )
-
-
 @app.on_message(filters.command("broadcast") & filters.user(SUDOERS))
 async def broadcast(_, message):
     if message.reply_to_message:
