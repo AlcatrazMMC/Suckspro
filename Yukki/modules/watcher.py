@@ -14,15 +14,15 @@ chat_watcher_group = 1
 welcome_group = 2
 
 WELCOME = [
-    "https://telegra.ph/file/b67d161998858575f6e1a.jpg",
-    "https://telegra.ph/file/0ae0fe261a86bfd61e526.jpg",
+    "https://telegra.ph/file/32493eb609fa847b43b8c.mp4",
+    "https://telegra.ph/file/547add5141d7f5c2b00c7.mp4",
     "https://telegra.ph/file/344f4bec8e26def7e723a.mp4",
 ]
 
 WLMTEXT = [
     "hiii",
     "yooo",
-    "Fuck",
+    "Test",
 ]
 
 
