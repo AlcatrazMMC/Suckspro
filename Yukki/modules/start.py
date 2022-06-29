@@ -13,7 +13,7 @@ from pyrogram.errors import MessageNotModified
 
 from Yukki import app, boot, botname, botusername
 from Yukki.database.cleanmode import cleanmode_off, cleanmode_on, is_cleanmode_on
-from Yukki.helpers import get_readable_time, put_cleanmode, settings_markup, RANDOM, HELP_TEXT
+from Yukki.helpers import get_readable_time, put_cleanmode, RANDOM, HELP_TEXT
 
 
 @app.on_message(filters.command(["start", "settings"]) & filters.group & ~filters.edited)
@@ -126,26 +126,3 @@ async def sex(_, message: Message):
     await message.delete()
 
 
-@app.on_message(
-    filters.group
-    & filters.incoming
-    & filters.reply
-    & ~filters.via_bot
-    & ~filters.bot
-    & ~filters.edited,
-)
-async def senko(_, message):
-    getme = await bot.get_me()
-    id = getme.id
-    if not message.reply_to_message.from_user.id == id:
-        return
-    WELC = (
-        "yes {message.from_user.mention}",
-        "uwu understand! u~u *does not really understand*",
-        "Hmm... :c",
-        "you are funny",
-        "hahhahaha ;",
-        "k",
-        "who",
-    )
-    await message.reply_text(choice(WELC))
