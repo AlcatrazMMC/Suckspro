@@ -13,13 +13,13 @@ from Yukki.helpers import get_readable_time, put_cleanmode
 chat_watcher_group = 1
 welcome_group = 2
 
-WELCOME = [
+MEDIA = [
     "https://telegra.ph/file/32493eb609fa847b43b8c.mp4",
     "https://telegra.ph/file/547add5141d7f5c2b00c7.mp4",
     "https://telegra.ph/file/344f4bec8e26def7e723a.mp4",
 ]
 
-WLMTEXT = [
+TEXT = [
     "hiii",
     "yooo",
     "Test",
@@ -29,16 +29,9 @@ WLMTEXT = [
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
-    gone = message.reply_video(video={random.choice(WELCOME)}, caption={random.choice(WLMTEXT)})
-    await message.reply_video(video={random.choice(WELCOME)}, caption={random.choice(WLMTEXT)})
-    if message.chat.id in last:
-        old_id = last[message.chat.id]
-        try:
-            await app.delete_messages(message.chat.id , old_id)
-        except:
-            pass
-    last[message.chat.id] = gone.message_id
-    
+    media = random.choice(MEDIA)
+    notes = random.choice(TEXT)
+    await message.reply_video(video=MEDIA, caption=TEXT)
 
 
 
