@@ -20,18 +20,18 @@ MEDIA = [
 ]
 
 TEXT = [
-    "hiii",
-    "yooo",
-    "Test",
+    "test 3",
+    "test 2",
+    "Test 1",
 ]
 
 
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
-    media = random.choice(MEDIA)
+    vedia = random.choice(MEDIA)
     notes = random.choice(TEXT)
-    await message.reply_video(video=MEDIA, caption=TEXT)
+    await message.reply_video(vedia, caption=notes)
 
 
 
