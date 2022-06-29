@@ -1,6 +1,7 @@
 import re
 import time
 import asyncio
+import random 
 
 from pyrogram import filters
 from pyrogram.types import Message
@@ -12,9 +13,25 @@ from Yukki.helpers import get_readable_time, put_cleanmode
 chat_watcher_group = 1
 welcome_group = 2
 
+RANDOM = [
+    "https://telegra.ph/file/b67d161998858575f6e1a.jpg",
+    "https://telegra.ph/file/0ae0fe261a86bfd61e526.jpg",
+    "https://telegra.ph/file/344f4bec8e26def7e723a.mp4",
+]
+
+WLMTEXT = [
+    "hiii",
+    "yooo",
+    "Fuck",
+]
+
+
+
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
-    await app.send_sticker(message.chat.id,"CAACAgUAAx0Cak5fVgABBiutYnzuLoHovOpsydapxzdpeGPn4kEAAqcFAALvw7lUqFiXebelCpskBA")
+    image = random.choice(WELCOME)
+    wtext = random.choice(WLMTEXT)
+    await message.reply_photo(photo=image, caption=wtext)
 
 
 
