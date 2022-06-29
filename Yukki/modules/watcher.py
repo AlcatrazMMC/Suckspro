@@ -25,12 +25,23 @@ WLMTEXT = [
     "Test",
 ]
 
-
+LAST = []
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
     image = random.choice(WELCOME)
     wtext = random.choice(WLMTEXT)
+    if message.chat.id in last:
+
+    old_id = last[message.chat.id]
+
+    try:
+
+        await app.delete_messages(message.chat.id , old_id)
+
+    except:
+
+        pass
     await message.reply_video(video=image, caption=wtext)
 
 
