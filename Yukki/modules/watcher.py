@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from Yukki import app, botid, botname, botusername
-from Yukki.database import add_served_chat,
+from Yukki.database import add_served_chat
 from Yukki.helpers import get_readable_time, put_cleanmode
 
 chat_watcher_group = 1
