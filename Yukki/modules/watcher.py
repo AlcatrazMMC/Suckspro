@@ -29,8 +29,6 @@ WLMTEXT = [
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
-
-
     gone = message.reply_video(video=image, caption=wtext)
     await message.reply_video(video={random.choice(WELCOME)}, caption={random.choice(WLMTEXT)})
     if message.chat.id in last:
