@@ -10,6 +10,7 @@ from Yukki.database import add_served_chat
 from Yukki.helpers import get_readable_time, put_cleanmode
 
 chat_watcher_group = 1
+welcome_group = 2
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
