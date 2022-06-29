@@ -147,18 +147,3 @@ Simple AFK commands~
 
 SOURCE CODE: /repo
 """
-
-def settings_markup(status: Union[bool, str] = None):
-    buttons = [
-        [
-            InlineKeyboardButton(text="CLEAN MODE→", callback_data="cleanmode_answer"),
-            InlineKeyboardButton(
-                text="✅ On" if status == True else "❌ Off",
-                callback_data="CLEANMODE",
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="CLOSE", callback_data="close"),
-        ],
-    ]
-    return buttons
