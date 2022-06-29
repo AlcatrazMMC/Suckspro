@@ -33,7 +33,7 @@ async def welcome(_, message: Message):
     vedia = random.choice(MEDIA)
     notes = random.choice(TEXT)
     await message.reply_video(vedia, caption=notes)
-    await put_cleanmode(message.chat.id, send.message_id)
+    await put_cleanmode(message.chat.id)
     
 
 
