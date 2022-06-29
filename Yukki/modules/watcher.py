@@ -31,7 +31,7 @@ WLMTEXT = [
 async def welcome(_, message: Message):
     image = random.choice(WELCOME)
     wtext = random.choice(WLMTEXT)
-    await message.reply_photo(photo=image, caption=wtext)
+    await message.reply_video(video=image, caption=wtext)
 
 
 
