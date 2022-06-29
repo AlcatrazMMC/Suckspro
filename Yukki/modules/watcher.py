@@ -32,16 +32,12 @@ async def welcome(_, message: Message):
     image = random.choice(WELCOME)
     wtext = random.choice(WLMTEXT)
     if message.chat.id in last:
-
     old_id = last[message.chat.id]
-
     try:
-
         await app.delete_messages(message.chat.id , old_id)
-
     except:
-
         pass
+last[message.chat.id] = gone.message_id
     await message.reply_video(video=image, caption=wtext)
 
 
