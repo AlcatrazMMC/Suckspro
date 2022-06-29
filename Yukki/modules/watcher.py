@@ -1,11 +1,12 @@
 import re
 import time
 import asyncio
-import random 
+
+from random import choice
 
 from pyrogram import filters
 from pyrogram.types import Message
-
+from Yukki.database.cleanmode import cleanmode_off, cleanmode_on, is_cleanmode_on
 from Yukki import app, botid, botname, botusername
 from Yukki.database import add_served_chat
 from Yukki.helpers import get_readable_time, put_cleanmode
