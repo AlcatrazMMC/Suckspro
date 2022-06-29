@@ -13,6 +13,14 @@ chat_watcher_group = 1
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
+
+
+
+
+
+
+@app.on_message(filters.new_chat_members, group=welcome_group)
+async def welcome(_, message: Message):
     chat_id = message.chat.id
     await add_served_chat(chat_id)
     for member in message.new_chat_members:
@@ -24,3 +32,4 @@ async def welcome(_, message: Message):
                 await put_cleanmode(message.chat.id, send.message_id)
         except:
             return
+
