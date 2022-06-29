@@ -13,7 +13,7 @@ chat_watcher_group = 1
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
-
+    await app.send_sticker(message.chat.id,"CAACAgUAAx0Cak5fVgABBiutYnzuLoHovOpsydapxzdpeGPn4kEAAqcFAALvw7lUqFiXebelCpskBA")
 
 
 
