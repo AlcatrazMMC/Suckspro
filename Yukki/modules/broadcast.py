@@ -5,7 +5,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
 from Yukki import SUDOERS, app
-from Yukki.database import get_afk_users, get_served_chats
+from Yukki.database import get_served_chats
 
 
 @app.on_message(filters.command("broadcast") & filters.user(SUDOERS))
