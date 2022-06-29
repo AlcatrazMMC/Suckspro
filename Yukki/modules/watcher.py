@@ -31,6 +31,7 @@ LAST = []
 async def welcome(_, message: Message):
     image = random.choice(WELCOME)
     wtext = random.choice(WLMTEXT)
+    gone = 
     await message.reply_video(video=image, caption=wtext)
     if message.chat.id in last:
         old_id = last[message.chat.id]
