@@ -131,19 +131,6 @@ RANDOM = [
 ]
 
 
-HELP_TEXT = f"""When someone mentions you in a chat, the user will be notified you are AFK. You can even provide a reason for going AFK, which will be provided to the user as well.
-
-Simple AFK commands~
-
-/afk - This will set you offline.
-
-/afk [Reason] - This will set you offline with a reason.
-
-/afk [Replied to a Sticker/Media] - This will set you offline with an Media File.
-
-/afk [Replied to a Sticker/Media] [Reason] - This will set you afk with Media and reason both.
-
+HELP_TEXT = f"""
 𓆩⌬𓆪 UCO Project
-
-SOURCE CODE: /repo
 """
