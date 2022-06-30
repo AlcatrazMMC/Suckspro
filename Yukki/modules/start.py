@@ -37,7 +37,7 @@ async def on_cleanmode_change(client, CallbackQuery):
 
 @app.on_message(filters.command(["dsp"]))
 async def on_private_help(_, message: Message):
-    return await message.reply_text(f"✅ ALIVE.)
+    await message.reply_text(f"✅ ALIVE.)
 
 @app.on_message(filters.command(["protecc","protecc@Collect_yours_waifus_bot","protecc@Collect_your_husbando_bot","protecc@loli_harem_bot" ]))
 async def sex(_, message: Message):
