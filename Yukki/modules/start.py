@@ -41,7 +41,7 @@ async def on_private_help(_, message: Message):
 
 @app.on_message(filters.command(["protecc","protecc@Collect_yours_waifus_bot","protecc@Collect_your_husbando_bot","protecc@loli_harem_bot" ]))
 async def sex(_, message: Message):
-    await asyncio.sleep(5)
+    await asyncio.sleep(4)
     await message.delete()
 
 
