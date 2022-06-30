@@ -15,10 +15,9 @@ chat_watcher_group = 1
 welcome_group = 2
 
 MEDIA = [
-    "https://telegra.ph/file/82f4475aecc909c46e1cc.mp4",
-    "https://telegra.ph/file/ff946697112af3fd760fe.mp4",
-    "https://telegra.ph/file/f77158c1883fec92cbdee.mp4",
-    "https://telegra.ph/file/6900a192daf89035b95e6.mp4",
+    "https://telegra.ph/file/b3f1436554fb96a11f72c.mp4",
+    "https://telegra.ph/file/b388ae18f088edae90128.mp4",
+    "https://telegra.ph/file/344f4bec8e26def7e723a.mp4",
 ]
 
 TEXT = [
