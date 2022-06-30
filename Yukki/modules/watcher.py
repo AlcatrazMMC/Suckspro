@@ -35,7 +35,6 @@ async def welcome(_, message: Message):
     name1 = message.from_user.mention
     name2 = message.from_user.username
     chat_id = message.chat.id
-
     await add_served_chat(chat_id)
     await message.reply_video(vedia, caption=notes.format(name1, name2))
     await put_cleanmode(message.chat.id)
