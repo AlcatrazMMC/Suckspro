@@ -4,8 +4,15 @@ import asyncio
 import random
 from random import choice
 
+import logging
+
+
+
+
+
+
 from pyrogram import filters
-from pyrogram.types import Message
+from pyrogram.types import Message, Chat
 from Yukki.database.cleanmode import cleanmode_off, cleanmode_on, is_cleanmode_on
 from Yukki import app, botid, botname, botusername
 from Yukki.database import add_served_chat
@@ -46,6 +53,55 @@ async def welcome(_, message: Message):
     send = await message.reply_video(vedia, caption=notes.format(name1, name2))
     await put_cleanmode(message.chat.id, send.message_id)
     
+
+
+
+from Main.Stuffs.utils import watch_floodwaits
+from Main import Bot, UB
+from ..vars import Var
+
+@watch_floodwaits
+@UB.on_message(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Var.GROUPS))
+async def kek(ub, message):
+    await asyncio.sleep(7)
+    await message.delete()
+    
+@watch_floodwaits
+@UB.on_message(filters.regex(pattern="You've been offered a waifu trade!") & filters.chat(Var.GROUPS))
+async def trade(ub, message):
+    await asyncio.sleep(30)
+    await message.delete()
+    
+@watch_floodwaits
+@UB.on_message(filters.regex(pattern="rip, the waifu has run away already...") & filters.chat(Var.GROUPS))
+async def ran(ub, message):
+    await asyncio.sleep(4)
+    async for m in ub.search_messages(message.chat.id, query='A qt waifu appeared!', limit=1):
+        await m.delete()
+    await asyncio.sleep(20)
+    await message.delete()
+    
+@watch_floodwaits
+@UB.on_message(filters.regex(pattern="rip, that's not quite right...") & filters.chat(Var.GROUPS))
+async def rip(ub, message):
+    await asyncio.sleep(3)
+    await message.delete()
+    
+@watch_floodwaits
+@UB.on_message(filters.regex(pattern="OwO you protecc'd") & filters.chat(Var.GROUPS))
+async def done(ub, message):
+    await asyncio.sleep(4)
+    async for m in ub.search_messages(message.chat.id, query='A qt waifu appeared!', limit=1):
+        await m.delete()
+    await asyncio.sleep(6)
+    await message.delete()
+    
+@watch_floodwaits
+@UB.on_message(filters.regex(pattern="Top harems in") & filters.chat(Var.GROUPS))
+async def top(ub, message):
+    await asyncio.sleep(60)
+    await message.delete()
+
 
 
 
