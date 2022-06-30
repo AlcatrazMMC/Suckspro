@@ -29,6 +29,8 @@ TEXT = [
     "Welcome !! {} 💕\n     🎋Kindly read Group's Description~ \n         🦊 Follow /rules \n            🥂Enjoy your stay.\n                                @{}",
     "Welcome !! {} ❤️\n     📜Kindly read Group's Description~ \n         🦋 Follow /rules \n            🎗️Enjoy your stay.\n                                @{}",
     "Welcome {} 🎋\n        🖥️Hope you're not a bot & crypto seller...\n        🍒Read /rules and enjoy your stay.\n                                @{}",
+    "Okaerinasai {} !!!\n\n Hope you'll stay Long with us!💙💚❤️💛\n      ★ @{} read /rules to make yourself at home★ 
+
 ]
 
 
