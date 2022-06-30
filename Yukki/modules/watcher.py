@@ -18,11 +18,17 @@ MEDIA = [
     "https://telegra.ph/file/b3f1436554fb96a11f72c.mp4",
     "https://telegra.ph/file/b388ae18f088edae90128.mp4",
     "https://telegra.ph/file/344f4bec8e26def7e723a.mp4",
+    "https://telegra.ph/file/257f6ac0c2a892757425b.mp4",
+    "https://telegra.ph/file/d17beb37bfcf1fe07832d.mp4",
+
+
+
 ]
 
 TEXT = [
     "Welcome !! {} 💕\n     🎋Kindly read Group's Description~ \n         🦊 Follow /rules \n            🥂Enjoy your stay.\n                                @{}",
     "Welcome !! {} ❤️\n     📜Kindly read Group's Description~ \n         🦋 Follow /rules \n            🎗️Enjoy your stay.\n                                @{}",
+    "Welcome {} 🎋\n        🖥️Hope you're not a bot & crypto seller...\n        🍒Read /rules and enjoy your stay.\n                                @{}",
 ]
 
 
