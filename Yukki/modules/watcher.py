@@ -55,11 +55,6 @@ async def welcome(_, message: Message):
     
 
 
-
-from Main.Stuffs.utils import watch_floodwaits
-from Main import Bot, UB
-from ..vars import Var
-
 @watch_floodwaits
 @UB.on_message(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Var.GROUPS))
 async def kek(ub, message):
