@@ -22,9 +22,8 @@ MEDIA = [
 ]
 
 TEXT = [
-    "{} test 3 @{} ",
-    "{} test 2 @{}",
-    "{} Test 1 @{}",
+    "Welcome !! {} 💕\n     🎋Kindly read Group's Description~ \n         🦊 Follow /rules \n            🥂Enjoy your stay.\n                       <{}>",
+    "Welcome !! {} ❤️\n     📜Kindly read Group's Description~ \n         🦋 Follow /rules \n            🎗️Enjoy your stay.\n                       <{}>",
 ]
 
 
