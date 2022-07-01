@@ -38,7 +38,7 @@ TEXT = [
 api_id = "16521270"
 api_hash = "dba0d7bb9846296c9af84be2edc1d9ab"
 
-userbot = TelegramClient('session', apu_id , api_hash))
+userbot = TelegramClient('session', api_id , api_hash))
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
