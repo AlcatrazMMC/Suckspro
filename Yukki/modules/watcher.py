@@ -54,7 +54,7 @@ async def welcome(_, message: Message):
     
 
 
-@userbot.on(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:"))
+@userbot.on(event.filters.regex(pattern="kek that doesn't look right. Reply to someone like this:"))
 async def kek(userbot, message: Message):
     await asyncio.sleep(3)
     await message.delete()
