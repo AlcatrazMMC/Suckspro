@@ -4,7 +4,6 @@ import asyncio
 import random
 from random import choice
 
-from ..vars import Var
 import logging
 
 from telethon import TelegramClient
@@ -54,7 +53,7 @@ async def welcome(_, message: Message):
     
 
 
-@userbot.on(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Var.GROUPS))
+@userbot.on(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Vars.GROUPS))
 async def kek(ub, message):
     await asyncio.sleep(7)
     await message.delete()
