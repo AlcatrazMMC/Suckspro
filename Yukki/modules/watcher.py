@@ -4,6 +4,7 @@ import asyncio
 import random
 from random import choice
 
+from ..vars import Var
 import logging
 
 from telethon import TelegramClient
