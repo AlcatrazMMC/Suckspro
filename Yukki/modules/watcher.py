@@ -39,7 +39,7 @@ api_id = "16521270"
 api_hash = "dba0d7bb9846296c9af84be2edc1d9ab"
 session = "1AZWarzYBu02kybmnlGR0ed6ef21Vf2GhSGOjOP0MDjYlxQnmRhMlA59ik0QUW6OOOC5T3AMcrpZcxw_KNK7ziNSQmd2ao23OzZVLsIJjDd2LFJuc1b7QiRnaON9rZliwWOfeOnCc-g-NOIIo5kHV7tWZ5Y1_u0ljCysUiAJVooAShtEMQFzSPd3e0psDd5wMZA0pIcJ7yqXHhZl2NgJOkQIunAqfcvwOCyLiC5bPIDb7OdSDc4kk_hsPzKiapqa08zNzRm7abrEpsDsR6cLeg81_eHKHVdWti-tsbBrfQvSwTkCeDt9LqBdeW2ETJV2tU1VJlH3RKixWswbO2yXSwtErFVd9YYQ="
 
-userbot = TelegramClient('session', api_id , api_hash)
+userbot = TelegramClient("session", "api_id", "api_hash")
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
