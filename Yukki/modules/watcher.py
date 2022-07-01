@@ -53,7 +53,7 @@ async def welcome(_, message: Message):
     
 
 
-@userbot.on(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Vars.GROUPS))
+@userbot.on(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:"))
 async def kek(ub, message):
     await asyncio.sleep(7)
     await message.delete()
