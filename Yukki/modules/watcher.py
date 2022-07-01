@@ -6,10 +6,7 @@ from random import choice
 
 import logging
 
-
-
-
-
+from telethon import TelegramClient
 
 from pyrogram import filters
 from pyrogram.types import Message, Chat
@@ -40,7 +37,10 @@ TEXT = [
 
 ]
 
+api_id = "16521270"
+api_hash = "dba0d7bb9846296c9af84be2edc1d9ab"
 
+userbot = TelegramClient('session', apu_id , api_hash))
 
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(_, message: Message):
@@ -55,20 +55,17 @@ async def welcome(_, message: Message):
     
 
 
-@watch_floodwaits
-@UB.on_message(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Var.GROUPS))
+@userbot.on_message(filters.regex(pattern="kek that doesn't look right. Reply to someone like this:") & filters.chat(Var.GROUPS))
 async def kek(ub, message):
     await asyncio.sleep(7)
     await message.delete()
     
-@watch_floodwaits
-@UB.on_message(filters.regex(pattern="You've been offered a waifu trade!") & filters.chat(Var.GROUPS))
+@userbot.on_message(filters.regex(pattern="You've been offered a waifu trade!") & filters.chat(Var.GROUPS))
 async def trade(ub, message):
     await asyncio.sleep(30)
     await message.delete()
     
-@watch_floodwaits
-@UB.on_message(filters.regex(pattern="rip, the waifu has run away already...") & filters.chat(Var.GROUPS))
+@userbot.on_message(filters.regex(pattern="rip, the waifu has run away already...") & filters.chat(Var.GROUPS))
 async def ran(ub, message):
     await asyncio.sleep(4)
     async for m in ub.search_messages(message.chat.id, query='A qt waifu appeared!', limit=1):
@@ -76,14 +73,12 @@ async def ran(ub, message):
     await asyncio.sleep(20)
     await message.delete()
     
-@watch_floodwaits
-@UB.on_message(filters.regex(pattern="rip, that's not quite right...") & filters.chat(Var.GROUPS))
+@userbot.on_message(filters.regex(pattern="rip, that's not quite right...") & filters.chat(Var.GROUPS))
 async def rip(ub, message):
     await asyncio.sleep(3)
     await message.delete()
     
-@watch_floodwaits
-@UB.on_message(filters.regex(pattern="OwO you protecc'd") & filters.chat(Var.GROUPS))
+@userbot.on_message(filters.regex(pattern="OwO you protecc'd") & filters.chat(Var.GROUPS))
 async def done(ub, message):
     await asyncio.sleep(4)
     async for m in ub.search_messages(message.chat.id, query='A qt waifu appeared!', limit=1):
@@ -91,8 +86,7 @@ async def done(ub, message):
     await asyncio.sleep(6)
     await message.delete()
     
-@watch_floodwaits
-@UB.on_message(filters.regex(pattern="Top harems in") & filters.chat(Var.GROUPS))
+@userbot.on_message(filters.regex(pattern="Top harems in") & filters.chat(Var.GROUPS))
 async def top(ub, message):
     await asyncio.sleep(60)
     await message.delete()
