@@ -5,7 +5,7 @@ from pyrogram import idle
 
 from Yukki.modules import ALL_MODULES
 
-loop = asyncio.get_event_loop()
+
 
 
 async def initiate_bot():
@@ -18,3 +18,4 @@ async def initiate_bot():
 
 if __name__ == "__main__":
     loop.run_until_complete(initiate_bot())
+    loop = asyncio.get_event_loop()
