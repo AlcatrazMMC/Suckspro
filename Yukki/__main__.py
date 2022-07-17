@@ -17,5 +17,5 @@ async def initiate_bot():
 
 
 if __name__ == "__main__":
-    loop.run_until_complete(initiate_bot())
     loop = asyncio.get_event_loop()
+    loop.run_until_complete(initiate_bot())
